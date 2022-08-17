@@ -53,7 +53,7 @@ class Conta:
     def depositar(self: object, valor: float) -> None:
         pass
 
-    def sacer(self: object, valor: float) -> None:
+    def sacar(self: object, valor: float) -> None:
         pass
 
     def transferir(self: object, destino: object, valor: float) -> None:
