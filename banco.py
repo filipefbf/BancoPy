@@ -4,7 +4,7 @@ from time import sleep
 from models.cliente import Cliente
 from models.conta import Conta
 
-contas: List[Conta] = [1]
+contas: List[Conta] = []
 
 
 def main() -> None:
@@ -57,7 +57,7 @@ def criar_conta() -> None:
 
     cliente: Cliente = Cliente(nome, email, cpf, data_nascimento)
 
-    conta: Conta(cliente)
+    conta: Conta = Conta(cliente)
 
     contas.append(conta)
 
@@ -71,12 +71,12 @@ def criar_conta() -> None:
 
 def efetuar_saque() -> None:
     if len(contas) > 0:
-        numero: int = input('Informe o número da sua conta: ')
+        numero: int = int(input('Informe o número da sua conta: '))
 
         conta: Conta = buscar_conta_por_numero(numero)
 
         if conta:
-            valor: float = input('Informe o valor do saque: ')
+            valor: float = float(input('Informe o valor do saque: '))
 
             conta.sacar(valor)
         else:
@@ -89,7 +89,7 @@ def efetuar_saque() -> None:
 
 def efetuar_deposito() -> None:
     if len(contas) > 0:
-        numero: int = input('Informe o número da sua conta: ')
+        numero: int = int(input('Informe o número da sua conta: '))
 
         conta: Conta = buscar_conta_por_numero(numero)
 

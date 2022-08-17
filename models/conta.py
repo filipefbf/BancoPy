@@ -59,7 +59,7 @@ class Conta:
             self.saldo_total = self._calcula_saldo_total
             print('Deposito efetuado com sucesso!')
         else:
-            print('Erro ao efeturar deposito. Tente novamente')
+            print('Erro ao efetuar deposito. Tente novamente')
 
     def sacar(self: object, valor: float) -> None:
         if 0 < valor <= self.saldo_total:
@@ -71,7 +71,7 @@ class Conta:
                 self.limite = self.limite + restante
                 self.saldo = 0
                 self.saldo_total = self._calcula_saldo_total
-                print('Saque efetuado com sucesso!')
+            print('Saque efetuado com sucesso!')
         else:
             print('Saque não realizado. Tente novamente')
 
